@@ -1,9 +1,10 @@
 'use strict'
-const shell = require('shelljs')
+const {executor} = require('../utils')
 
 console.log('making system modifications:')
 
 const commands = [
+  'set -e',
   // Disable the sound effects on boot
   "sudo nvram SystemAudioVolume=' ' ",
 
@@ -530,29 +531,8 @@ const commands = [
     'done',
 ]
 
-commands.map(projection)
-console.log(
-  'Done. Note that some of these changes require a logout/restart to take effect',
-)
-console.log(`TODO:
-install:
-  battery indicator (App Store)
-  Gifski (App Store)
-  Runcat (App Store)
-  Todoist (App Store)
-  Webcam Settings (App Store)
-  Audacity (https://www.audacityteam.org/download/)
-  
-Restart Terminal.app
-copy git config from your backup/re-login
-copy .npmrc from your backup/re-login
-login to literally everything
-`)
+commands.map(executor)
 
-function projection(command, index) {
-  console.log(`Executing: ${command}`)
-  const output = shell.exec(command)
-  if (output.code !== 0) {
-    shell.echo(`Error: ${command} failed!`)
-  }
-}
+console.log(
+  'system modification completed. Note that some of these changes require a logout/restart to take effect',
+)
