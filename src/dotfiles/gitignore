@@ -1,13 +1,50 @@
+# Mac
 .DS_Store
+
+# WebStorm
+.idea/
+
+# npm
+npm-debug.log
+
+# yarn
+yarn-error.log
+
+# VIM
+*.un~
+Session.vim
+.netrwhist
+*~
+.lvimrc
+
+# VS Code
+.vscode/
+# localhistory
+.history
+
+# PayPal project specific stuff
+.nvmrc
+.agignore
+
+# Over-arching stuff
+*.ignored/
+*.ignored.*
+
+# git
+*.patch
+
+# eslint
+.eslintcache
+
 *.swp
 *.swo
+
+# sublime
 *.sublime-project
 *.sublime-workspace
+
 *.pyc
 .bundle
 .env
 .rvmrc
 .ruby-version
-
-npm-debug.log
-yarn-error.log

@@ -1,9 +1,11 @@
 'use strict'
 const {executor, createSymlink} = require('../utils')
+
+// dotfile names, in dotfiles folder
 const DOT_FILENAME = 'gitignore'
 
 console.clear()
-console.log('setting up the git ...')
+console.log('setup Git...')
 
 const commands = [
   // hub: a github-specific version of git
@@ -39,4 +41,4 @@ createSymlink(DOT_FILENAME)
 
 commands.forEach(executor)
 
-console.log('github settings completed.')
+console.log('Git setup completed.')

@@ -92,7 +92,7 @@ while true; do
     case $yn in
       [Yy]* )
         yarn && yarn start;;
-      [Nn]* ) echo "Please add RSA token into Github & then execute 'yarn && yarn install'"; exit;;
+      [Nn]* ) echo "Please add RSA token into Github & then execute 'yarn && yarn start'"; exit;;
       * ) echo "Please answer yes or no.";;
     esac
 done
