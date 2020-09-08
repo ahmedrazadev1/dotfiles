@@ -12,7 +12,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
-echo "Hello $(whoami)! Let's get you set up."
+echo "Hey $(whoami), go get some food 🍕🌮 while I'm setting up your Mac!"
 
 echo "mkdir -p ${HOME}/codes"
 mkdir -p "${HOME}/codes"
@@ -40,14 +40,13 @@ fi
 brew update
 
 echo "brew installing stuff"
-# hub: a github-specific version of git
 # ripgrep: rg is faster than alternatives
 # imagemagick: eventually I will need this for something
 # ffmpeg: eventually I'll need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
 # switchaudio-osx: allows me to switch the audio device via the command line
-brew install git hub ripgrep imagemagick watchman tree bat \
+brew install ripgrep imagemagick watchman tree bat \
 delta switchaudio-osx
 
 echo "installing node (via nvm)"
