@@ -75,7 +75,7 @@ screenflow marshallofsound-google-play-music-player skype workflowy \
 sublime-text vlc obs handbrake zoomus betterzip avibrazil-rdm sip \
 qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
 suspicious-package qlvideo focus qmoji slack intellij-idea upwork \
-hubstaff insomnia vim adoptopenjdk/openjdk/adoptopenjdk8
+hubstaff insomnia adoptopenjdk/openjdk/adoptopenjdk8
 
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
