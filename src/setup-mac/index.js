@@ -1,1 +1,2 @@
-console.log("setting up mac general")
+'use strict'
+console.log('setting up mac-general')
