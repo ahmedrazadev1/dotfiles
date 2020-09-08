@@ -37,6 +37,6 @@ const commands = [
 
 createSymlink(DOT_FILENAME)
 
-commands.map(executor)
+commands.forEach(executor)
 
 console.log('github settings completed.')

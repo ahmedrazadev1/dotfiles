@@ -531,7 +531,7 @@ const commands = [
     'done',
 ]
 
-commands.map(executor)
+commands.forEach(executor)
 
 console.log(
   'system modification completed. Note that some of these changes require a logout/restart to take effect',
