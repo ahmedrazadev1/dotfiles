@@ -4,6 +4,8 @@ console.clear()
 // requires
 require('./setup-mac')
 require('./setup-git')
+require('./setup-vim')
+require('./setup-zsh')
 
 console.log(`TODO:
 install:

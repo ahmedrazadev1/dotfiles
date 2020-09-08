@@ -3,8 +3,10 @@ const os = require('os')
 const path = require('path')
 const {createSymlink, executor} = require('../utils')
 
+console.clear()
+console.log('setup Vim ...')
 // dotfile names, in dotfiles folder
-const VIMRC = 'vimrc'
+const DOT_FILENAME = 'vimrc'
 
 const commands = [
   'set -e',
@@ -14,6 +16,8 @@ const commands = [
   'vim +PlugInstall +qall',
 ]
 
-createSymlink(VIMRC)
+createSymlink(DOT_FILENAME)
 
 commands.forEach(executor)
+
+console.log('Vim setup completed.')

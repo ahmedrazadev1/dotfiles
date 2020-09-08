@@ -7,9 +7,13 @@
   "devEngines": {
     "node": "12.x || 13.x || 14.x"
   },
+  "author": "Ahmad Raza (iamfotx) <https://twitter.com/iamfotx>",
   "scripts": {
     "start": "node src/",
     "setup-mac": "node src/setup-mac/",
+    "setup-git": "node src/setup-git",
+    "setup-vim": "node src/setup-vim",
+    "setup-zsh": "node src/setup-zsh",
     "lint": "eslint --ignore-path .gitignore --ext .js .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
     "format": "yarn prettier --write",
