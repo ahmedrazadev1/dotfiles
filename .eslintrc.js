@@ -1,3 +1,4 @@
+'use strict'
 const OFF = 0
 const ERROR = 2
 
