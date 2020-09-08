@@ -1,1 +1,1 @@
-console.log("setting up mac's general")
+console.log('setting up mac general')
