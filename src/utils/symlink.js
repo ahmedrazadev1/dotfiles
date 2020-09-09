@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const os = require('os')
 
-const dotfiles_dir = path.join(process.cwd(), 'dotfiles')
+const dotfiles_dir = path.join(process.cwd(), 'src', 'dotfiles')
 const home = os.homedir()
 
 function createSymlink(filename) {

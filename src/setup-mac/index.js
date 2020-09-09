@@ -521,18 +521,7 @@ const commands = [
   'defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false',
   'defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false',
 
-  //  --------------------------------------------------------------------
-  //  Kill affected Applications
-  //  --------------------------------------------------------------------
-
-  'for app in "Activity Monitor" "Address Book" "Calendar" "cfprefsd" "Contacts" "Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SystemUIServer" "iCal"; \n' +
-    'do \n' +
-    'killall "${app}" &> /dev/null \n' +
-    'done',
+  'echo "system modification completed. Note that some of these changes require a logout/restart to take effect"',
 ]
 
 commands.forEach(executor)
-
-console.log(
-  'system modification completed. Note that some of these changes require a logout/restart to take effect',
-)

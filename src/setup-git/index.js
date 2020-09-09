@@ -8,9 +8,6 @@ console.clear()
 console.log('setup Git...')
 
 const commands = [
-  // hub: a github-specific version of git
-  'brew install git hub',
-
   'git config --global alias.br branch',
   'git config --global alias.cm commit',
   'git config --global alias.cmm "commit -m"',

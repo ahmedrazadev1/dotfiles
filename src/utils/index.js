@@ -3,11 +3,14 @@ const createSymlink = require('./symlink')
 const {execSync} = require('child_process')
 
 function executor(command) {
-  console.log(`Executing: ${command}`)
   try {
-    execSync(command)
+    let stdout = execSync(command)
+    stdout = stdout.toString()
+    if (stdout) {
+      console.log(stdout)
+    }
   } catch (e) {
-    console.error(`Error: ${command} failed!`)
+    console.error(`Command: ${command} failed!`)
   }
 }
 
