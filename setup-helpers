@@ -1,0 +1,26 @@
+#!/bin/sh
+
+fancy_echo() {
+  # shellcheck disable=SC2039
+  local fmt="$1"; shift
+
+  # shellcheck disable=SC2059
+  printf "\n$fmt\n" "$@"
+}
+
+# shellcheck disable=SC2039
+dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+install_dotfile() {
+  # shellcheck disable=SC2039
+  local name="$1"
+  # shellcheck disable=SC2039
+  local from="$dotfiles_dir/$name"
+  # shellcheck disable=SC2039
+  local to="$HOME/.$name"
+
+  if [ ! -e $to ]; then
+    fancy_echo "Creating $to ..."
+    ln -s $from $to
+  fi
+}

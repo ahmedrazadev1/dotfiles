@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Ask for the administrator password upfront
+sudo -v
+
+set -e
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Keep-alive: update existing `sudo` time stamp until `.setup` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+echo "Hey $(whoami), go get some food 🍕🌮 while I'm setting up your Mac!"
+
+echo "mkdir -p ${HOME}/codes"
+mkdir -p "${HOME}/codes"
+
+uname=`uname`
+platform="unknown"
+# shellcheck disable=SC2039
+if [[ $uname == "Darwin" ]]; then
+   platform="macos"
+elif [[ $uname == "Linux" ]]; then
+   platform="linux"
+fi
+
+# shellcheck disable=SC2039
+if [ "$platform" == "macos" ]; then
+  ./setup-homebrew
+  ./setup-apps
+  ./setup-mac
+fi
+
+./setup-bash
+./setup-git
+./setup-vim
+./setup-node

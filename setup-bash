@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+# shellcheck disable=SC2039
+source setup-helpers
+
+install_dotfile "bash_profile"
+install_dotfile "bashrc"
+
+mkdir -p $HOME/.config
+
+install_dotfile "config/base16-shell"

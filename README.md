@@ -1,9 +1,8 @@
-# Setup Dotfiles
+#  iamfotx's Dotfiles 
 
-It lets the fresh mac to rock & roll 🙄🤘🚀
+It lets the fresh mac to rock & roll 🙄🤘🚀. Setup a new machine by running `./setup`. Or setup an individual component by running e.g. `./setup-vim`.
 
-Download the following [gist](https://gist.github.com/iamfotx/e8a3f426aa42ace316ba10a55e27b1c1) and execute:
+The goal is for all scripts to be idempotent and able to run on any platform, including:
 
-````bash
-sh ./setup.sh
-````
+* macOS
+* ChromeOS

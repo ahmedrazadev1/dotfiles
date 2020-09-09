@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Ask for the administrator password upfront
+sudo -v
+
+echo "installing apps with brew cask"
+brew cask install google-chrome firefox bettertouchtool \
+bartender google-drive-file-stream itsycal visual-studio-code 1password \
+screenflow marshallofsound-google-play-music-player skype workflowy \
+sublime-text vlc obs handbrake zoomus betterzip avibrazil-rdm sip \
+qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
+suspicious-package qlvideo focus qmoji slack intellij-idea upwork \
+hubstaff insomnia adoptopenjdk/openjdk/adoptopenjdk8
